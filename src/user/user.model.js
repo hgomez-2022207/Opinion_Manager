@@ -27,7 +27,7 @@ const UsuarioSchema = mongoose.Schema({
     role:{
         type:String,
         required:true,
-        enum: ['ADMIN_ROLE']
+        enum: ['USER_ROLE']
     }
 },{
     versionKey: false 
