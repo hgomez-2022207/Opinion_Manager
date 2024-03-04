@@ -16,7 +16,9 @@ export const comentaryPost = async(req, res) =>{
         }
 
         if (!pub) {
-            console.log('no se ha enctrado la publicacion');
+            return res.status(400).json({
+                msg: "Esta publicacion no existe, porfafor intente poner el nombre de nuevo"
+            });
             
         }
 
