@@ -5,11 +5,9 @@ export const validarJWT = async (req, res, next) =>{
     const token = req.header('x-token');
 
     if(!token){
-
-        return res.status(401).jason({
-            msg: "No se hizo la peticion"
+        return res.status(401).json({
+            msg: "No hay peticion",
         });
-        
     }
 
     try{
