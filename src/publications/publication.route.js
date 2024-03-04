@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { CratePublication,
-        PutPublication} from "./publication.controller.js";
+        PutPublication, publicDelete} from "./publication.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 
@@ -29,6 +29,14 @@ router.put(
         validarCampos,
     ],
     PutPublication
+);
+
+router.delete(
+    "/",
+    [
+        validarJWT,
+        check('qualification','invalid email').not().isEmpty(),
+    ],publicDelete
 );
 
 
