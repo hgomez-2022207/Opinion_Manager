@@ -7,9 +7,7 @@ export const comentaryPost = async(req, res) =>{
         console.log('hi');
         const user = await User.findOne({email});
         const pub = await Public.findOne({qualification})
-        console.log('pub',pub)
 
-        console.log(user);
         if (!user) {
             console.log('hi2');
             return res.status(400).json({
