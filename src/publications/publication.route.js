@@ -15,5 +15,16 @@ router.post(
     ],
     CratePublication
 );
+/*
+router.put(
+    '/',
+    [
+        check('qualification', 'The qualification is requiredio').not().isEmpty(),
+        check('category', 'The category is requiredio').not().isEmpty(),
+        check('text', 'The text is requiredio').not().isEmpty(),
+        validarCampos,
+    ],
+    PutUser
+);*/
 
 export default router;
