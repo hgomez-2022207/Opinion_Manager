@@ -18,7 +18,7 @@ class Server{
         this.userPath = '/api/user'
         this.authPath = '/api/auth'
         this.publicPath = '/api/public'
-        this.comentPat = 'api/comentary'
+        this.comentPat = '/api/comentary'
 
         this.conectarDB();
         this.middlewares();
