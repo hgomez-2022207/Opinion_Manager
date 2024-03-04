@@ -8,6 +8,7 @@ import { dbConnection } from './mongo.js';
 
 import userRoutes from '../src/user/user.route.js';
 import authRoute from '../src/auth/auth.route.js'
+import publicRoute from '../src/publications/publication.route.js'
 
 class Server{
     constructor(){
@@ -15,6 +16,7 @@ class Server{
         this.port = process.env.PORT;
         this.userPath = '/api/user'
         this.authPath = '/api/auth'
+        this.publicPath = '/api/public'
 
         this.conectarDB();
         this.middlewares();
@@ -36,6 +38,7 @@ class Server{
     routes(){
         this.app.use(this.userPath,userRoutes)
         this.app.use(this.authPath,authRoute)
+        this.app.use(this.publicPath,publicRoute)
 
     }
 
