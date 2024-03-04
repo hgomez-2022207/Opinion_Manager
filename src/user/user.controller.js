@@ -44,6 +44,31 @@ export const PutUser = async (req, res = response) =>{
     });
 }
 
+export const userDelete = async (req, res) =>{
+    const { email } = req.body;
+
+    const us = await User.findOne({email});
+    console.log(us);
+
+    if (!us) {
+        console.log('hi');
+        return res.status(400).json({
+            msg: "El usuario no existe en la base de datos, porfavor, verifique qeu el correo sea el correcto"
+        });
+    }
+
+    us.state=false;
+
+    const user = await User.findByIdAndUpdate(us.id, us);
+    const usuarioAutenticado = req.usuario;
+
+    res.status(200).json({
+        msg: "Usuario elimado",
+        user,
+        usuarioAutenticado
+    })
+}
+
 /*export const PutUser = async (req, res) => {
     const { name } = req.params; // La cualificación de la publicación que deseas actualizar
     const { email, password } = req.body;
