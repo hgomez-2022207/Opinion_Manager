@@ -1,0 +1,129 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Publications",
+    "dateExported": "2024-03-04T04:25:05.030Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ef5e7c07-2142-45ab-a14d-68851bc7ed6d",
+            "colId": "c071b0c3-8e12-4492-a81e-8f66e3b8ee3d",
+            "containerId": "",
+            "name": "CreatePublication",
+            "url": "http://localhost:8080/api/public",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T22:48:56.350Z",
+            "modified": "2024-03-04T02:07:48.892Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZGI3NDg1NGRlOTM5MGViMDRhOWQiLCJpYXQiOjE3MDk1MTgwNjAsImV4cCI6MTcwOTUyMTY2MH0.REWqsQh5oTAwZviHDiKLIy7Z0LbUupoh8JWJyiuGVpo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qualification\":\"Como esto yo?\",\n  \"category\":\"Emotional\",\n  \"text\":\"Bueno jrnnsdf u cnas ;djnsf lijdvj dkn fv\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ffa973f-4407-4de4-85be-9a3405c37040",
+            "colId": "c071b0c3-8e12-4492-a81e-8f66e3b8ee3d",
+            "containerId": "",
+            "name": "crateComentary",
+            "url": "http://localhost:8080/api/comentary",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T00:11:51.449Z",
+            "modified": "2024-03-04T02:07:55.299Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZGI3NDg1NGRlOTM5MGViMDRhOWQiLCJpYXQiOjE3MDk1MTgwNjAsImV4cCI6MTcwOTUyMTY2MH0.REWqsQh5oTAwZviHDiKLIy7Z0LbUupoh8JWJyiuGVpo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qualification\": \"Como esto yo?\",\n  \"email\":\"marco@gmail.com\",\n  \"comentary\":\"Me parece bien\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "00eb97c0-3435-49f0-b3f6-f0f377854483",
+            "colId": "c071b0c3-8e12-4492-a81e-8f66e3b8ee3d",
+            "containerId": "",
+            "name": "PutPublication",
+            "url": "http://localhost:8080/api/public",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-04T02:52:50.243Z",
+            "modified": "2024-03-04T02:55:02.582Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZGI3NDg1NGRlOTM5MGViMDRhOWQiLCJpYXQiOjE3MDk1MTgwNjAsImV4cCI6MTcwOTUyMTY2MH0.REWqsQh5oTAwZviHDiKLIy7Z0LbUupoh8JWJyiuGVpo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qualification\":\"Como esto yo?\",\n  \"category\":\"Entretenimento\",\n  \"text\":\"Ejemplo de resultado\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3833a585-4f26-48ec-bc39-d87acdf2230d",
+            "colId": "c071b0c3-8e12-4492-a81e-8f66e3b8ee3d",
+            "containerId": "",
+            "name": "deletePublic",
+            "url": "http://localhost:8080/api/public",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-04T03:33:23.040Z",
+            "modified": "2024-03-04T03:34:41.945Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0YjdiN2M4YWYzZDM5ODU4MjI1MjMiLCJpYXQiOjE3MDk1MjE4NTUsImV4cCI6MTcwOTUyNTQ1NX0.mF6DtJwGSLlooaBwd7QFMC4AKNMtHI4x1GbQFXrHVxQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qualification\":\"Como esto yo?\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bdb67417-0863-4588-a547-78e32ee2aad0",
+            "colId": "c071b0c3-8e12-4492-a81e-8f66e3b8ee3d",
+            "containerId": "",
+            "name": "deleteComentary",
+            "url": "http://localhost:8080/api/public",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-04T03:35:13.341Z",
+            "modified": "2024-03-04T04:14:00.277Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0YjdiN2M4YWYzZDM5ODU4MjI1MjMiLCJpYXQiOjE3MDk1MjU2MjcsImV4cCI6MTcwOTUyOTIyN30.k8aFUDuW5pGfScbSKPkjQz4JKMd6zzuen4PXxbttr50"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qualification\":\"Como esto yo?\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

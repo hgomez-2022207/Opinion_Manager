@@ -1,0 +1,82 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "user",
+    "dateExported": "2024-03-04T04:24:41.989Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b9d9eeff-1d39-48db-b1e2-7db4fa365dc5",
+            "colId": "ba0c4070-359e-4b5a-9a4e-c0ebad7333fa",
+            "containerId": "",
+            "name": "CreateUser",
+            "url": "http://localhost:8080/api/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T07:03:09.366Z",
+            "modified": "2024-03-04T03:17:12.318Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Herlin\",\n  \"email\":\"gustavo@gmail.com\",\n  \"password\":\"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea438ba3-ca07-48fd-84a2-8a34e73cd86e",
+            "colId": "ba0c4070-359e-4b5a-9a4e-c0ebad7333fa",
+            "containerId": "",
+            "name": "PutUser",
+            "url": "http://localhost:8080/api/user",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-03T23:19:15.429Z",
+            "modified": "2024-03-04T02:38:07.477Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0ZGI3NDg1NGRlOTM5MGViMDRhOWQiLCJpYXQiOjE3MDk1MTgwNjAsImV4cCI6MTcwOTUyMTY2MH0.REWqsQh5oTAwZviHDiKLIy7Z0LbUupoh8JWJyiuGVpo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Malvin\",\n  \"email\":\"marco@gmail.com\",\n  \"password\":\"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb39afd2-4ebc-47fb-8d28-a48c3d2c92f6",
+            "colId": "ba0c4070-359e-4b5a-9a4e-c0ebad7333fa",
+            "containerId": "",
+            "name": "deleteUser",
+            "url": "http://localhost:8080/api/user?email=gustavo@gmail.com",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-04T02:55:31.323Z",
+            "modified": "2024-03-04T03:20:04.363Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0YjdiN2M4YWYzZDM5ODU4MjI1MjMiLCJpYXQiOjE3MDk1MjE4NTUsImV4cCI6MTcwOTUyNTQ1NX0.mF6DtJwGSLlooaBwd7QFMC4AKNMtHI4x1GbQFXrHVxQ"
+                }
+            ],
+            "params": [
+                {
+                    "name": "email",
+                    "value": "gustavo@gmail.com",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"gustavo@gmail.com\"\n}\n\n",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
