@@ -38,3 +38,27 @@ export const PutPublication = async (req, res = response) =>{
         pub
     });
 }
+
+export const publicDelete = async (req, res) =>{
+    const { qualification } = req.body;
+
+    const p = await Public.findOne({qualification});
+    console.log(p);
+
+    if (!p) {
+        return res.status(400).json({
+            msg: "El Titulo no existe en la base de datos, porfavor, verifique qeu el Titulo sea el correcto"
+        });
+    }
+
+    p.state=false;
+
+    const pub = await Public.findByIdAndUpdate(p.id, p);
+    const publicacionAutenticado = req.usuario;
+
+    res.status(200).json({
+        msg: "Publicacion elimado",
+        pub,
+        publicacionAutenticado
+    })
+}
