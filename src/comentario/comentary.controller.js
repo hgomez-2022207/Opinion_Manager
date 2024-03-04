@@ -39,3 +39,28 @@ export const comentaryPost = async(req, res) =>{
         });
     }
 }
+
+export const comentDelete = async (req, res) =>{
+    const { qualification } = req.body;
+
+    const p = await Public.findOne({qualification});
+    console.log(p);
+
+    if (!p) {
+        return res.status(400).json({
+            msg: "El Titulo no existe en la base de datos, porfavor, verifique qeu el Titulo sea el correcto"
+        });
+    }
+
+    p.comentary.pop()
+    p.user.pop();
+
+    const pub = await Public.findByIdAndUpdate(p.id, p);
+    const publicacionAutenticado = req.usuario;
+
+    res.status(200).json({
+        msg: "Publicacion elimado",
+        pub,
+        publicacionAutenticado
+    })
+}
